@@ -1,2 +1,3 @@
 User-agent: *
 Disallow: /hs-web-design/
+Disallow: /2020victory-text-team-docs/
