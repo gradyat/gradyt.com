@@ -21,7 +21,6 @@ jobs:
 
       steps:
       - uses: actions/checkout@v3
-      - uses: fregante/setup-git-user@v1
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -31,6 +30,7 @@ jobs:
         run: npm ci
 
       - name: Bump version
+        uses: fregante/setup-git-user@v1
         run: |
           npm version ${{ inputs.version_type }} -m "Bump version to %s"
           git push
@@ -44,3 +44,5 @@ jobs:
         with:
           publish_dir: _site
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          user_name: 'github-actions[bot]'
+          user_email: '41898282+github-actions[bot]@users.noreply.github.com'
