@@ -1,45 +1,45 @@
 name: Release, build, and deploy
 
 on:
-	workflow_dispatch:
-		inputs:
-			version_type:
-				description: 'Version Type'
-				required: true
-				type: choice
-				options:
-				- major
-				- minor
-				- patch
-				- skip version update
+  workflow_dispatch:
+    inputs:
+      version_type:
+        description: 'Version Type'
+        required: true
+        type: choice
+        options:
+        - major
+        - minor
+        - patch
+        - skip version update
 
 jobs:
-	eleventy_deploy:
-		- name: Release, build, and deploy
-		runs-on: ubuntu-latest
+  eleventy_deploy:
+    - name: Release, build, and deploy
+    runs-on: ubuntu-latest
 
-		steps:
-			- uses: actions/checkout@v3
-			- uses: fregante/setup-git-user@v1
-			- uses: actions/setup-node@v3
-					with:
-					node-version: 16
-					cache: 'npm'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: fregante/setup-git-user@v1
+      - uses: actions/setup-node@v3
+          with:
+          node-version: 16
+          cache: 'npm'
 
-			- name: Install dependencies
-				run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-			- name: Bump version
-				run: |
-					npm version ${{ inputs.version_type }} -m "Bump version to %s"
-					git push
-				if: ${{ inputs.version_type }} != 'skip version update'
+      - name: Bump version
+        run: |
+          npm version ${{ inputs.version_type }} -m "Bump version to %s"
+          git push
+        if: ${{ inputs.version_type }} != 'skip version update'
 
-			- name: Build
-				run: npm run build
+      - name: Build
+        run: npm run build
 
-			- name: Deploy to GitHub Pages
-				uses: peaceiris/actions-gh-pages@v3
-				with:
-					publish_dir: _site
-					github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: _site
+          github_token: ${{ secrets.GITHUB_TOKEN }}
