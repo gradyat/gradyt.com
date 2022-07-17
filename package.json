@@ -1,0 +1,33 @@
+{
+	"name": "gradyat.github.io",
+	"version": "0.1.0",
+	"description": "Grady Thompson's personal website",
+	"main": "index.js",
+	"scripts": {
+		"build": "npx @11ty/eleventy",
+		"start": "npx @11ty/eleventy --serve",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gradyat/gradyat.github.io.git"
+	},
+	"keywords": [
+		"personal website",
+		"eleventy"
+	],
+	"author": {
+		"name": "Grady Thompson",
+		"email": "gradyt513@gmail.com"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/gradyat/gradyat.github.io/issues"
+	},
+	"homepage": "https://www.gradyt.com",
+	"private": "true",
+	"devDependencies": {
+		"@11ty/eleventy": "^2.0.0-canary.13",
+		"html-minifier": "^4.0.0"
+	}
+}
