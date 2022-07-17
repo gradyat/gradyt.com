@@ -16,13 +16,13 @@ on:
 jobs:
   eleventy_deploy:
     - name: Release, build, and deploy
-    runs-on: ubuntu-latest
+      runs-on: ubuntu-latest
 
-    steps:
+      steps:
       - uses: actions/checkout@v3
       - uses: fregante/setup-git-user@v1
       - uses: actions/setup-node@v3
-          with:
+        with:
           node-version: 16
           cache: 'npm'
 
