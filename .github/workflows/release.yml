@@ -34,7 +34,7 @@ jobs:
         run: |
           npm version ${{ inputs.version_type }} -m "Bump version to %s"
           git push
-        if: ${{ inputs.version_type }} != 'skip version update'
+        if: ${{ inputs.version_type != 'skip version update' }}
 
       - name: Build
         run: npm run build
