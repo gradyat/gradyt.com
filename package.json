@@ -1,6 +1,6 @@
 {
 	"name": "gradyat.github.io",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Grady Thompson's personal website",
 	"main": "index.js",
 	"scripts": {
