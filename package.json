@@ -2,7 +2,6 @@
 	"name": "gradyat.github.io",
 	"version": "0.1.1",
 	"description": "Grady Thompson's personal website",
-	"main": "index.js",
 	"scripts": {
 		"build": "npx @11ty/eleventy",
 		"start": "npx @11ty/eleventy --serve",
@@ -13,7 +12,7 @@
 		"url": "https://github.com/gradyat/gradyat.github.io.git"
 	},
 	"keywords": [
-		"personal website",
+		"personal-website",
 		"eleventy"
 	],
 	"author": {
