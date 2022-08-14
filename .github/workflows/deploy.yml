@@ -29,10 +29,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v3
+
     - uses: fregante/setup-git-user@v1
       if: ${{ inputs.version_type != 'skip version update' }}
-
-    - uses: actions/checkout@v3
 
     - uses: actions/setup-node@v3
       with:
