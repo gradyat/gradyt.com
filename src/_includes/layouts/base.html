@@ -7,10 +7,12 @@
 	<meta name="generator" content="{{ eleventy.generator }}">
 	<meta name="version" content="{{ pkg.version }}">
 	<title>{{ pkg.author.name }}</title>
+	<link rel="stylesheet" href="../../styles/styles.css">
 </head>
 
 <body>
 	{{ content | safe }}
+	{% include "layouts/footer.html" %}
 </body>
 
 </html>

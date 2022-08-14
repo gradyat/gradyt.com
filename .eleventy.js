@@ -16,6 +16,11 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy("CNAME");
 	eleventyConfig.addPassthroughCopy(".nojekyll");
+	eleventyConfig.addPassthroughCopy("src/styles");
+
+	eleventyConfig.setServerOptions({
+		showAllHosts: true
+	});
 
 	return {
 		htmlTemplateEngine: "njk",
