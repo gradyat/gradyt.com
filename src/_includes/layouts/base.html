@@ -6,7 +6,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="generator" content="{{ eleventy.generator }}">
 	<meta name="version" content="{{ pkg.version }}">
-	<title>{{ pkg.author.name }}</title>
+	<meta name="author" content="{{ pkg.author.name }}">
+	<title>{% if title %}{{ title }} - {% endif %}{{ pkg.author.name }}</title>
+	<meta name="description" content="{% if description %}{{ description }}{% else %}{{ pkg.description }}{% endif %}">
+	<link rel="author" href="humans.txt">
+	<meta property="og:title" content="{% if title %}{{ title }}{% endif %}">
+	<meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ pkg.description }}{% endif %}">
+	<meta property="og:site_name" content="{{ pkg.author.name }}">
+	<meta name="twitter:creator" content="{{ site.author.twitter }}">
+	<meta name="twitter:title" content="{% if title %}{{ title }} - {% endif %}{{ pkg.author.name }}">
+	<meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ pkg.description }}{% endif %}">
+	<link rel="license" href="https://github.com/gradyat/gradyat.github.io/blob/main/LICENSE.md">
 	<link rel="stylesheet" href="../../styles/styles.css">
 </head>
 
