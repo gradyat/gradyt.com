@@ -1,4 +1,5 @@
 const htmlmin = require("html-minifier");
+const CleanCSS = require("clean-css");
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
@@ -13,7 +14,9 @@ module.exports = function (eleventyConfig) {
 		return content;
 	});
 
-	eleventyConfig.addPassthroughCopy("src/styles");
+	eleventyConfig.addFilter("cssmin", function(code) {
+  	return new CleanCSS({}).minify(code).styles;
+  });
 
 	eleventyConfig.setServerOptions({
 		showAllHosts: true
