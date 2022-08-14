@@ -13,8 +13,6 @@ module.exports = function (eleventyConfig) {
 		return content;
 	});
 
-	eleventyConfig.addPassthroughCopy("CNAME");
-	eleventyConfig.addPassthroughCopy(".nojekyll");
 	eleventyConfig.addPassthroughCopy("src/styles");
 
 	eleventyConfig.setServerOptions({
