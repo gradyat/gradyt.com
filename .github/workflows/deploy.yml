@@ -45,6 +45,8 @@ jobs:
 
     - name: Bump version
       run: |
+        git config user.name "Grady Thompson"
+        git config user.email "gradyt513@gmail.com"
         npm version ${{ inputs.version_type }} -m "Bump version to %s"
         git push
       if: ${{ inputs.version_type != 'skip version update' }}
