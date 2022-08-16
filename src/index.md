@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.html
+layout: layouts/main.html
 ---
 # {{ pkg.author.name }}
 
