@@ -12,6 +12,8 @@
 	<meta name="generator" content="{{ eleventy.generator }}">
 	<meta name="version" content="{{ pkg.version }}">
 	<link rel="license" href="https://github.com/gradyat/gradyat.github.io/blob/main/LICENSE.md">
+	{% set currentUrl %}{{ pkg.homepage }}{% if page.url != "/" %}{{ page.url }}{% endif %}{% endset %}
+	<link rel="canonical" href="{{ currentUrl }}">
 
 	<!-- Styles -->
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{% if build.environment != "development" %}🦒{% else %}🌈{% endif %}</text></svg>">
@@ -26,9 +28,8 @@
 	<meta property="og:title" content="{{ title if title else pkg.author.name }}">
 	<meta property="og:description" content="{{ description if description else pkg.description }}">
 	<meta property="og:site_name" content="{{ pkg.author.name }}">
-	<meta property="og:url" content="{{ page.url }}">
-	<meta name="twitter:title" content="{% if title %}{{ title }} - {% endif %}{{ pkg.author.name }}">
-	{% if description %}<meta name="twitter:description" content="{{ description }}">{% endif %}
+	<meta property="og:url" content="{{ currentUrl }}">
+	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="{{ site.author.twitter }}">
 	<meta name="twitter:creator" content="{{ site.author.twitter }}">
 </head>
