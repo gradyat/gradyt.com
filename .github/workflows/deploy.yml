@@ -33,12 +33,12 @@ jobs:
 
     - uses: actions/setup-node@v3
       with:
-        node-version: 16
+        node-version: 18
         cache: 'npm'
 
     - name: Setup Pages
       id: pages
-      uses: actions/configure-pages@v1
+      uses: actions/configure-pages@v2
 
     - name: Install dependencies
       run: npm ci
@@ -47,7 +47,7 @@ jobs:
       run: |
         git config user.name "Grady Thompson"
         git config user.email "gradyt513@gmail.com"
-        npm version ${{ inputs.version_type }} -m "Bump version to %s"
+        npm version ${{ inputs.version_type }} -m "release: v%s"
         git push
       if: ${{ inputs.version_type != 'skip version update' }}
 
