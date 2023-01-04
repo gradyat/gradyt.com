@@ -12,3 +12,7 @@ footer {
 samp {
 	font-size: .85em;
 }
+
+:focus-visible {
+	outline: 3px solid darkblue;
+}
