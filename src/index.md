@@ -3,6 +3,7 @@ layout: layouts/main.html
 ---
 # {{ pkg.author.name }}
 
-🚧 **A _work-in-progress_ personal site. Built with [Eleventy](https://www.11ty.dev) 🎈.**
+I'm an accessibility engineer at [DocuSign](https://www.docusign.com).
 
-[View on GitHub]({{ pkg.repository.url }})
+🚧 _This site is a work-in-progress. [View it on GitHub]({{ pkg.repository.url }})._
+
