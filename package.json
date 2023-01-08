@@ -1,6 +1,6 @@
 {
 	"name": "gradyat.github.io",
-	"version": "0.4.0",
+	"version": "0.5.0",
 	"description": "Grady Thompson's personal website",
 	"scripts": {
 		"build": "npx @11ty/eleventy",
