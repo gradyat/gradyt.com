@@ -25,7 +25,7 @@
 	"homepage": "https://www.gradyt.com",
 	"private": "true",
 	"devDependencies": {
-		"@11ty/eleventy": "^2.0.0-canary.23",
+		"@11ty/eleventy": "^2.0.0-canary.25",
 		"clean-css": "^5.3.1",
 		"cross-env": "^7.0.3",
 		"html-minifier": "^4.0.0"
