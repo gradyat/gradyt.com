@@ -1,9 +1,11 @@
-const date = new Date();
+const { DateTime } = require("luxon");
+
+const dateTime = DateTime.now().setZone('America/Los_Angeles');
 
 module.exports = function() {
   return {
     environment: process.env.ENVIRONMENT || "production",
-		buildDate: date.toISOString().substring(0, 10).replaceAll("-", "/"),
-		buildYear: date.getFullYear()
+		buildDate: dateTime.toLocaleString(),
+		buildYear: dateTime.toFormat('y')
   };
 };
