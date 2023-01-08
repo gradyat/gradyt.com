@@ -12,7 +12,7 @@
 	<meta name="generator" content="{{ eleventy.generator }}">
 	<meta name="version" content="{{ pkg.version }}">
 	<link rel="license" href="https://github.com/gradyat/gradyat.github.io/blob/main/LICENSE.md">
-	{% set currentUrl %}{{ pkg.homepage }}{% if page.url != "/" %}{{ page.url }}{% endif %}{% endset %}
+	{% set currentUrl %}{{ pkg.homepage }}{{ page.url }}{% endset %}
 	<link rel="canonical" href="{{ currentUrl }}">
 
 	<!-- Styles -->
