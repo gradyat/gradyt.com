@@ -1,18 +1,63 @@
+:root {
+	--color-off-black: #212121;
+	--color-off-white: #F9F9F9;
+	--color-link-light-theme: #6912BF;
+	--color-link-dark-theme: #B679F2;
+}
+
 body {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	width: 80vw;
 	max-width: 60rem;
 	margin: auto;
+	background-color: var(--color-off-white);
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	color: var(--color-text);
+	font-size: 1.5em;
 }
 
 footer {
 	font-size: .8em;
 }
 
+a {
+	color: var(--color-link-light-theme);
+}
+
+a:hover:not(a:active) {
+	text-decoration-thickness: 4px;
+}
+
+a:active {
+	color: var(--color-off-white); 
+	background-color: var(--color-link-light-theme);
+}
+
+:focus-visible {
+	outline-style: solid;
+	outline-width: 2.5px;
+	outline-color: var(--color-link-light-theme);
+}
+
 samp {
 	font-size: .85em;
 }
 
-:focus-visible {
-	outline: 3px solid darkblue;
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: var(--color-off-black);
+		color: var(--color-off-white);
+	}
+
+	a {
+		color: var(--color-link-dark-theme);
+	}
+
+	a:active {
+		color: var(--color-off-black);
+		background-color: var(--color-link-dark-theme);
+	}
+
+	:focus-visible {
+		outline-color: var(--color-link-dark-theme);
+	}
 }
