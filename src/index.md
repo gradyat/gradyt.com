@@ -5,3 +5,4 @@ layout: layouts/main.html
 
 I'm an accessibility engineer at [DocuSign](https://www.docusign.com).
 
+[LinkedIn](https://www.linkedin.com/in/gradythompson/)
