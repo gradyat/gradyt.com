@@ -2,6 +2,9 @@
 
 This is Grady Thompson's website. Built with Eleventy, hosted by GitHub Pages. [gradyt.com](https://www.gradyt.com/)
 
+![Eleventy](https://img.shields.io/badge/Eleventy-000?logo=eleventy&logoColor=fff&style=flat)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222?logo=githubpages&logoColor=fff&style=flat)
+
 ## Status
 
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/gradyat/gradyat.github.io?color=%23BE5718)](package.json)
