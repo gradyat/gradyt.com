@@ -61,3 +61,23 @@ samp {
 		outline-color: var(--color-link-dark-theme);
 	}
 }
+
+.a11y-webring-club {
+	font-size: 0.8em;
+	/* border: 2px solid black; */
+}
+
+.a11y-webring-club ul {
+	list-style-type: none;
+	/* display: flex; */
+	/* flex-flow: row wrap; */
+	margin-left: 0;
+	padding-left: 0;
+}
+
+@media screen and (min-width: 600px) {
+	.a11y-webring-club ul {
+		display: flex;
+		gap: 10px;
+	}
+}
