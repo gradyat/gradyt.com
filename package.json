@@ -1,6 +1,6 @@
 {
 	"name": "gradyat.github.io",
-	"version": "0.6.0",
+	"version": "0.7.0",
 	"description": "Grady Thompson's personal website",
 	"scripts": {
 		"clean": "rm -rf ./_site",
