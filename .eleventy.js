@@ -14,9 +14,9 @@ module.exports = function (eleventyConfig) {
 		return content;
 	});
 
-	eleventyConfig.addFilter("cssmin", function(code) {
-  	return new CleanCSS({}).minify(code).styles;
-  });
+	eleventyConfig.addFilter("cssmin", function (code) {
+		return new CleanCSS({}).minify(code).styles;
+	});
 
 	eleventyConfig.setServerOptions({
 		showAllHosts: true
