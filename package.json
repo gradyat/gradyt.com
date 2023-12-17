@@ -1,5 +1,5 @@
 {
-	"name": "gradyat.github.io",
+	"name": "gradyt.com",
 	"version": "0.7.0",
 	"description": "Grady Thompson's personal website",
 	"scripts": {
@@ -9,7 +9,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/gradyat/gradyat.github.io"
+		"url": "https://github.com/gradyat/gradyt.com"
 	},
 	"keywords": [
 		"personal-website",
@@ -20,9 +20,6 @@
 		"email": "gradyt513@gmail.com"
 	},
 	"license": "UNLICENSED",
-	"bugs": {
-		"url": "https://github.com/gradyat/gradyat.github.io/issues"
-	},
 	"homepage": "https://www.gradyt.com",
 	"private": "true",
 	"devDependencies": {
