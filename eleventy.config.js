@@ -1,7 +1,7 @@
-const htmlmin = require("html-minifier");
-const CleanCSS = require("clean-css");
+import htmlmin from "html-minifier";
+import CleanCSS from "clean-css";
 
-module.exports = function (eleventyConfig) {
+export default async function(eleventyConfig) {
 	eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
 		if (outputPath && outputPath.endsWith(".html")) {
 			let minified = htmlmin.minify(content, {

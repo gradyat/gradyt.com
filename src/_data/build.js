@@ -1,8 +1,8 @@
-const { DateTime } = require("luxon");
+import { DateTime } from "luxon";
 
 const dateTime = DateTime.now().setZone('America/Los_Angeles');
 
-module.exports = function() {
+export default async function() {
   return {
     environment: process.env.ENVIRONMENT || "production",
 		buildDate: dateTime.toLocaleString(),
