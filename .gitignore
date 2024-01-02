@@ -3,3 +3,6 @@ node_modules/
 
 # Ignore eleventy output
 _site/
+
+# Ignore Wrangler files
+.wrangler/

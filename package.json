@@ -5,7 +5,9 @@
 	"scripts": {
 		"clean": "rm -rf ./_site",
 		"build": "npx @11ty/eleventy",
-		"start": "cross-env ENVIRONMENT=development npx @11ty/eleventy --serve"
+		"build:watch": "npx @11ty/eleventy --watch",
+		"start": "cross-env ENVIRONMENT=development npx @11ty/eleventy --serve",
+		"serve": "wrangler pages dev ./_site"
 	},
 	"repository": {
 		"type": "git",
@@ -27,6 +29,7 @@
 		"@11ty/eleventy": "3.0.0-alpha.3",
 		"clean-css": "^5.3.3",
 		"cross-env": "^7.0.3",
-		"html-minifier": "^4.0.0"
+		"html-minifier": "^4.0.0",
+		"wrangler": "^3.22.1"
 	}
 }
