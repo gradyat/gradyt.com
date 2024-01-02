@@ -18,6 +18,8 @@ export default async function(eleventyConfig) {
 		return new CleanCSS({}).minify(code).styles;
 	});
 
+	eleventyConfig.addPassthroughCopy("src/_headers");
+
 	eleventyConfig.setServerOptions({
 		showAllHosts: true
 	});
