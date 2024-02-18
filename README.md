@@ -1,6 +1,6 @@
 # Grady Thompson
 
-This is Grady Thompson's website. Built with Eleventy, hosted by GitHub Pages. [gradyt.com](https://www.gradyt.com/)
+This is Grady Thompson's personal website. Built with Eleventy, hosted by Cloudflare Pages. [gradyt.com](https://www.gradyt.com/)
 
 ## Tech
 
@@ -17,4 +17,5 @@ This is Grady Thompson's website. Built with Eleventy, hosted by GitHub Pages. [
 
 - Prerequisite: Node.js v18 and npm
 - Install dependencies: `npm install`
-- Run development: `npm start`
+- Run development server: `npm start`
+- Run production build: `npm run build`
