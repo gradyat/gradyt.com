@@ -1,2 +1,5 @@
 /humans.txt
 	Content-Type: text/markdown;charset=utf-8
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
