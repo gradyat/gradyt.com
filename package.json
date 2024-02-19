@@ -1,6 +1,5 @@
 {
 	"name": "gradyt.com",
-	"version": "0.7.0",
 	"description": "Grady Thompson's personal website",
 	"scripts": {
 		"clean": "rm -rf ./_site",
