@@ -3,3 +3,7 @@
 
 https://:project.pages.dev/*
   X-Robots-Tag: noindex
+  Link: <https://www.gradyt.com/:splat>; rel="canonical"
+
+https://:deployment.:project.pages.dev/*
+  Link: <https://www.gradyt.com/:splat>; rel="canonical"
