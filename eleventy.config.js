@@ -24,7 +24,6 @@ export default async function(eleventyConfig) {
 			return code;
 		});
 	}
-	
 
 	eleventyConfig.addPassthroughCopy("src/_headers");
 	eleventyConfig.addPassthroughCopy("src/robots.txt");

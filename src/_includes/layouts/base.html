@@ -10,7 +10,6 @@
 	<title>{% if title %}{{ title }} - {% endif %}{{ pkg.author.name }}</title>
 	<meta name="description" content="{{ description if description else pkg.description }}">
 	<meta name="generator" content="{{ eleventy.generator }}">
-	<meta name="version" content="{{ pkg.version }}">
 	{% set currentUrl %}{{ pkg.homepage }}{{ page.url }}{% endset %}
 	<link rel="canonical" href="{{ currentUrl }}">
 
