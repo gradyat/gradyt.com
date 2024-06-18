@@ -1,7 +1,11 @@
 import htmlmin from "html-minifier-terser";
 import CleanCSS from "clean-css";
+import favicons from "eleventy-plugin-gen-favicons";
+import jsonmin from "jsonminify";
 
 export default async function(eleventyConfig) {
+	eleventyConfig.addPlugin(favicons, {})
+
 	if (process.env.ELEVENTY_RUN_MODE === "build") {
 		eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
 			if (outputPath && outputPath.endsWith(".html")) {
@@ -10,7 +14,6 @@ export default async function(eleventyConfig) {
 					collapseWhitespace: true,
 					removeComments: true,
 					sortAttributes: true
-					// old
 				});
 				return minified;
 			};
@@ -23,7 +26,14 @@ export default async function(eleventyConfig) {
 			};
 			return code;
 		});
-	}
+
+		eleventyConfig.addTransform("jsonmin", function (json, outputPath) {
+			if (outputPath && outputPath.endsWith(".webmanifest")) {
+				return new jsonmin(json);
+			};
+			return json;
+		});
+	};
 
 	eleventyConfig.addPassthroughCopy("src/_headers");
 	eleventyConfig.addPassthroughCopy("src/robots.txt");

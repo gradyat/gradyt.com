@@ -14,10 +14,11 @@
 	<link rel="canonical" href="{{ currentUrl }}">
 
 	<!-- Styles -->
-	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{% if build.environment != "development" %}🦒{% else %}🌈{% endif %}</text></svg>">
 	<link rel="preload" href="/assets/styles.css" as="style" />
 	<link rel="stylesheet" href="/assets/styles.css" />
-
+	{# this is silly but needed for https://github.com/NJAldwin/eleventy-plugin-gen-favicons/issues/12 #}
+	{%- if true -%}{% favicons 'src/favicon.svg', manifestData = { lang: "en", name: pkg.author.name, shortName: site.author.shortName, start_url: "/", display: "minimal-ui", theme_color: "#6912BF" } %}{%- endif -%}
+	
 	<!-- Me -->
 	<meta name="author" content="{{ pkg.author.name }}">
 	<link rel="author" href="humans.txt">
