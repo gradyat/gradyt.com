@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="/assets/styles.css" />
 	{# this is silly but needed for https://github.com/NJAldwin/eleventy-plugin-gen-favicons/issues/12 #}
 	{%- if true -%}{% favicons 'src/favicon.svg', manifestData = { lang: "en", name: pkg.author.name, short_name: site.author.shortName, start_url: "/", display: "minimal-ui", theme_color: "#6912BF" } %}{%- endif -%}
+	<meta name="theme-color" content="#6912BF">
 	
 	<!-- Me -->
 	<meta name="author" content="{{ pkg.author.name }}">
