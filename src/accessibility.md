@@ -1,6 +1,6 @@
 ---
 title: Accessibility Statement
-layout: layouts/main.html
+layout: layouts/article.html
 ---
 # Accessibility Statement
 
