@@ -1,4 +1,5 @@
 ---
+title: Accessibility Statement
 layout: layouts/main.html
 ---
 # Accessibility Statement

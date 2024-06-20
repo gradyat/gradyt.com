@@ -8,7 +8,7 @@
 
 	<!-- Site basics -->
 	<title>{% if title %}{{ title }} - {% endif %}{{ pkg.author.name }}</title>
-	<meta name="description" content="{{ description if description else pkg.description }}">
+	{% if description %}<meta name="description" content="{{ description }}">{% endif %}
 	<meta name="generator" content="{{ eleventy.generator }}">
 	{% set currentUrl %}{{ pkg.homepage }}{{ page.url }}{% endset %}
 	<link rel="canonical" href="{{ currentUrl }}">
@@ -26,7 +26,7 @@
 
 	<!-- Social -->
 	<meta property="og:title" content="{{ title if title else pkg.author.name }}">
-	<meta property="og:description" content="{{ description if description else pkg.description }}">
+	{%- if description -%}<meta property="og:description" content="{{ description }}">{%- endif -%}
 	<meta property="og:site_name" content="{{ pkg.author.name }}">
 	<meta property="og:url" content="{{ currentUrl }}">
 	<meta name="twitter:card" content="summary">
