@@ -6,9 +6,9 @@ layout: layouts/article.html
 
 ## Conformance
 
-This website is conformant with the [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG22/) Level AA. This means that the website supports all WCAG 2.1 Level A & AA success criteria without any exceptions.
+This website is conformant with the [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/) Level AA. This means that the website supports all WCAG 2.2 Level A & AA success criteria without any exceptions.
 
-<a href="https://www.w3.org/WAI/WCAG2AA-Conformance" title="Explanation of WCAG 2 Level AA conformance"><img alt="Level AA conformance, W3C WAI Web Content Accessibility Guidelines 2.2" src="https://www.w3.org/WAI/WCAG22/wcag2.2AA-blue.svg"></a>
+<a href="https://www.w3.org/WAI/WCAG2AA-Conformance" title="Explanation of WCAG 2 Level AA conformance"><img height="64" width="176" alt="Level AA conformance, W3C WAI Web Content Accessibility Guidelines 2.2" src="https://www.w3.org/WAI/WCAG22/wcag2.2AA-blue.svg"></a>
 
 I recognize that accessibility and usability goes beyond WCAG conformance. Where feasible, I will incorporate additional accessibility best practices and WCAG Level AAA success criteria.
 
