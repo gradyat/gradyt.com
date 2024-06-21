@@ -7,4 +7,4 @@ Grady Thompson is an accessibility engineer based the Seattle area. He works at 
 
 [LinkedIn](https://www.linkedin.com/in/gradythompson/)
 
-[Accessibility Statement](/accessibility)
+[Accessibility Statement](/accessibility/)

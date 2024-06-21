@@ -19,7 +19,7 @@
 		"email": "gradyt513@gmail.com"
 	},
 	"license": "UNLICENSED",
-	"homepage": "https://www.gradyt.com",
+	"homepage": "https://www.gradyt.com/",
 	"private": "true",
 	"type": "module",
 	"devDependencies": {
