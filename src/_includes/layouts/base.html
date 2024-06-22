@@ -6,6 +6,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!-- Linked styles -->
+	<link rel="preload" href="/assets/styles.css" as="style" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="/assets/styles.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Freeman&family=Work+Sans:wght@450&display=swap" rel="stylesheet">
+
 	<!-- Site basics -->
 	<title>{% if title %}{{ title }} - {% endif %}{{ pkg.author.name }}</title>
 	{% if description %}<meta name="description" content="{{ description }}">{% endif %}
@@ -14,8 +21,6 @@
 	<link rel="canonical" href="{{ currentUrl }}">
 
 	<!-- Styles -->
-	<link rel="preload" href="/assets/styles.css" as="style" />
-	<link rel="stylesheet" href="/assets/styles.css" />
 	{# this is silly but needed for https://github.com/NJAldwin/eleventy-plugin-gen-favicons/issues/12 #}
 	{%- if true -%}{% favicons 'src/favicon.svg', manifestData = { lang: "en", name: pkg.author.name, short_name: site.author.shortName, start_url: "/", display: "minimal-ui", theme_color: site.style.themeColor } %}{%- endif -%}
 	<meta name="theme-color" content="{{ site.style.themeColor }}">
