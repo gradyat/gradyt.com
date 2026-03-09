@@ -1,9 +1,10 @@
 import htmlmin from "html-minifier-terser";
 import CleanCSS from "clean-css";
+import { transform } from "lightningcss";
 import favicons from "eleventy-plugin-gen-favicons";
 import jsonmin from "jsonminify";
 
-export default async function(eleventyConfig) {
+export default async function (eleventyConfig) {
 	eleventyConfig.addPlugin(favicons, {})
 
 	if (process.env.ELEVENTY_RUN_MODE === "build") {
@@ -19,10 +20,15 @@ export default async function(eleventyConfig) {
 			};
 			return content;
 		});
-	
+
 		eleventyConfig.addTransform("cssmin", function (code, outputPath) {
 			if (outputPath && outputPath.endsWith(".css")) {
-				return new CleanCSS({}).minify(code).styles;
+				return new transform({
+					filename: 'style.css',
+					code: Buffer.from(code),
+					minify: true,
+					sourceMap: true
+				}).code;
 			};
 			return code;
 		});
